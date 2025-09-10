@@ -13,14 +13,14 @@ Remove-AzureRmPublicIpAddress -Name pan-ip -ResourceGroupName magoni
 New-AzPublicIpAddress -Name Pan-mgt-Ip -ResourceGroupName magoni -Location 'AustraliaSouthEast' -AllocationMethod static -sku standard
 New-AzPublicIpAddress -Name Pan-untrust-Ip -ResourceGroupName magoni -Location 'AustraliaSouthEast' -AllocationMethod static -sku standard
 
-$vnet = Get-AzVirtualNetwork -Name HubNetwork -ResourceGroupName HubNetwork-RG
+$vnet = Get-AzVirtualNetwork -Name HubNetwork -ResourceGroupName magoni
 $subnet = Get-AzVirtualNetworkSubnetConfig -Name Mgt -VirtualNetwork $vnet
 $nic = Get-AzNetworkInterface -Name paloaltofw-pan-ip-eth0 -ResourceGroupName magoni
 $pip = Get-AzPublicIpAddress -Name Pan-mgt-Ip -ResourceGroupName magoni
 $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig-mgmt -PublicIPAddress $pip -Subnet $subnet
 $nic | Set-AzNetworkInterface
 
-$vnet = Get-AzVirtualNetwork -Name HubNetwork -ResourceGroupName HubNetwork-RG
+$vnet = Get-AzVirtualNetwork -Name HubNetwork -ResourceGroupName magoni
 $subnet = Get-AzVirtualNetworkSubnetConfig -Name Untrust -VirtualNetwork $vnet
 $nic = Get-AzNetworkInterface -Name paloaltofw-pan-ip-eth1 -ResourceGroupName magoni
 $pip = Get-AzPublicIpAddress -Name Pan-untrust-Ip -ResourceGroupName magoni
