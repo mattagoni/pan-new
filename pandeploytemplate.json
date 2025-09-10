@@ -34,7 +34,7 @@
             "type": "string",
             "allowedValues": [
                 "latest",
-                "11.2.5-h1"
+                "11.2.5"
             ],
             "metadata": {
                 "description": "Version number of VM-Series VM in the Azure portal"
