@@ -42,7 +42,7 @@
             "value": "HubNetwork"
         },
         "virtualNetworkExistingRGName": {
-            "value": "HubNetwork-rg"
+            "value": "magoni"
         },
         "virtualNetworkAddressPrefixes": {
             "value": [
