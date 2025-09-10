@@ -237,7 +237,7 @@
     },
     "variables": {
         "imagePublisher": "paloaltonetworks",
-        "imageSku": "BYOL",
+        "imageSku": "byol",
         "imageOffer": "vmseries-flex",
         "nsgName": "DefaultNSG",
         "nicName": "[concat(parameters('vmName'), '-', parameters('publicIPAddressName'), '-eth')]",
