@@ -34,7 +34,7 @@
             "type": "string",
             "allowedValues": [
                 "latest",
-                "9.1.2"
+                "11.2.5-h1"
             ],
             "metadata": {
                 "description": "Version number of VM-Series VM in the Azure portal"
@@ -237,7 +237,7 @@
     },
     "variables": {
         "imagePublisher": "paloaltonetworks",
-        "imageSku": "bundle2",
+        "imageSku": "BYOL",
         "imageOffer": "vmseries-flex",
         "nsgName": "DefaultNSG",
         "nicName": "[concat(parameters('vmName'), '-', parameters('publicIPAddressName'), '-eth')]",
